@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /*visualmente não muda, muda o comportamento*/
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(228, 248, 255);
+        }
+
+        thead, tfoot {
+            background-color: rgb(28, 28, 85);
+            color: white;
+        }
+
+        thead > tr > th { /* seletor onde fiz um caminho completo, o th está dentro do tr que está dentro de thead */
+            position: sticky;
+            top: -1px;
+            background-color: rgb(28, 28, 85);
+        }
+
+        tbody > tr:nth-child(odd) { /*
+        pseudoclassa
+        tr:nth-child(2n) quer dizer q vai ter background-color de 2 em 2 linhas;
+        
+        tr:nth-child(odd) apenas as linhas impares ficaram com background-color.
+
+        tr:nth-child(even): apenas as pares ficariam com background-color
+
+        posso criar um seletor diferente para linhas par e impar e intercalar a cor,
+
+        */
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: rgb(162, 201, 253);
+        }
+
+        td.num {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Anatomia para tabelas Grandes
+            TABLE
+              CAPTION= LEGENDA DA TABELA  
+                 THEAD // NÃO É OBRIGATÓRIO TER
+                    <tr>, <td>, <th>
+                    TBODY
+                        <tr>, <td>, <th>
+                            TFOOT // NÃO É OBRIGATÓRIO TER
+                                <tr>, <td>, <th>
+    -->
+    <table>
+        <caption>População das Unidades fererativas</caption>
+            <thead>
+                <tr>
+                    <th scope="col1">Estado</th> <!-- é o título da coluna -->
+                    <th scope="col1" style="width: 50px;">População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">45 919 049</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num">21 168 791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num">17 264 943</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626	</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380	</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num">10 882 965	</td>
+                </tr>
+                <tr>
+                    <td>Pernambuco</td>
+                    <td class="num">9 058 931</td>
+                </tr>
+                <tr>
+                    <td>Ceará</td>
+                    <td class="num">8 794 957</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="num">8 121 025</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="num">7 610 361</td>
+                </tr>
+                <tr>
+                    <td>Goias</td>
+                    <td class="num">7 056 495</td>
+                </tr>
+                <tr>
+                    <td>Maranhão</td>
+                    <td class="num">6 775 805</td>
+                </tr>
+                <tr>
+                    <td>Paraíba</td>
+                    <td class="num">3 974 687</td>
+                </tr>
+                <tr>
+                    <td>Amazonas</td>
+                    <td class="num">3 941 613</td>
+                </tr>
+                <tr>
+                    <td>Espiríto Santo</td>
+                    <td class="num">3 833 712</td>
+                </tr>
+                <tr>
+                    <td>Mato Grosso</td>
+                    <td class="num">3 658 649</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Norte</td>
+                    <td class="num">3 302 729</td>
+                </tr>
+                <tr>
+                    <td>Piauí</td>
+                    <td class="num">3 271 199</td>
+                </tr>
+                <tr>
+                    <td>Alagoas</td>
+                    <td class="num">3 127 683</td>
+                </tr>
+                <tr>
+                    <td>Distrito Federal</td>
+                    <td class="num">2 817 381</td>
+                </tr>
+                <tr>
+                    <td>Mato Grosso do Sul</td>
+                    <td class="num">2 757 013</td>
+                </tr>
+                <tr>
+                    <td>Sergipe</td>
+                    <td class="num">2 209 558	</td>
+                </tr>
+                <tr>
+                    <td>Rondônia</td>
+                    <td class="num">1 581 196</td>
+                </tr>
+                <tr>
+                    <td>Tocantins</td>
+                    <td class="num">1 511 460</td>
+                </tr>
+                <tr>
+                    <td>Acre</td>
+                    <td class="num">830 018</td>
+                </tr>
+                <tr>
+                    <td>Amapá</td>
+                    <td class="num">733 759</td>
+                </tr>
+                <tr>
+                    <td>Roraima</td>
+                    <td class="num">636 707</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total de Habitantes</th> <!-- scope está na mesma linha-->
+                    <td class="num"><strong>210.147.125</strong></td>
+                </tr>
+            </tfoot>
+    </table>
+</body>
+</html> 
