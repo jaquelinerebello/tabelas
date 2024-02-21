@@ -12,7 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
-            position: relative; /*visualmente não muda, muda o comportamento*/
+            position: relative; /* visualmente não muda, muda o comportamento, serve como base para modifiar a posição do elemento na tela, toma como base a sua posição inicial e a partir dela modificamos top e left */
         }
 
         td, th{
@@ -38,7 +38,8 @@
             background-color: rgb(28, 28, 85);
         }
 
-        tbody > tr:nth-child(odd) { /*
+        tbody > tr:nth-child(odd) {
+        /*
         pseudoclassa
         tr:nth-child(2n) quer dizer q vai ter background-color de 2 em 2 linhas;
         
@@ -84,6 +85,7 @@
                     <th scope="col1" style="width: 50px;">População</th>
                 </tr>
             </thead>
+            
             <tbody>
                 <tr>
                     <td>São Paulo</td>
